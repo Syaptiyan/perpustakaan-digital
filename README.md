@@ -1,69 +1,161 @@
-# CodeIgniter 4 Application Starter
+# 📚 SIPUS - Sistem Informasi Perpustakaan
 
-## What is CodeIgniter?
+Sistem manajemen perpustakaan modern berbasis web yang dibangun dengan CodeIgniter 4. Fitur lengkap untuk mengelola buku, anggota, peminjaman, dan masih banyak lagi.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+## 🚀 Fitur Utama
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+### 📖 Manajemen Buku
+- CRUD buku lengkap (judul, ISBN, penulis, penerbit, kategori, rak)
+- Upload cover buku
+- Barcode & QR Code buku
+- Pencarian fulltext
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+### 👥 Manajemen Anggota
+- Data anggota lengkap
+- Kartu anggota (cetak)
+- Status keanggotaan & masa aktif
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+### 📋 Peminjaman & Pengembalian
+- Proses peminjaman & pengembalian
+- Tracking denda keterlambatan
+- Riwayat peminjaman per anggota
+- Pengajuan peminjaman online
 
-## Installation & updates
+### 📊 Dashboard & Laporan
+- Dashboard statistik interaktif
+- Grafik peminjaman per bulan
+- Laporan buku, anggota, peminjaman, denda
+- Export laporan
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+### 🔐 Autentikasi & Keamanan
+- Login & registrasi
+- Two-Factor Authentication (2FA)
+- Role-based access control (Admin, Petugas, Anggota)
+- API token untuk integrasi
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+### ⚙️ Pengaturan Sistem
+- Pengaturan perpustakaan
+- Backup & restore database
+- Maintenance mode
+- Whitelabel (custom branding)
 
-## Setup
+### 🎯 Fitur Tambahan
+- Kalender peminjaman
+- Notifikasi sistem
+- Wishlist & favorit buku
+- Rekomendasi buku
+- Scan barcode
+- Broadcast pesan
+- Audit log aktivitas
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+## 🛠️ Teknologi
 
-## Important Change with index.php
+| Komponen | Teknologi |
+|----------|-----------|
+| **Backend** | PHP 8.2+, CodeIgniter 4.7 |
+| **Database** | MySQL 8.0+ |
+| **Frontend** | Tailwind CSS, Alpine.js |
+| **Chart** | Chart.js |
+| **Calendar** | FullCalendar |
+| **Barcode** | JsBarcode, Html5-QRCode |
+| **Container** | Docker (opsional) |
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+## 📦 Instalasi
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+### Prasyarat
+- PHP 8.2+
+- MySQL 8.0+
+- Composer
+- Node.js (opsional, untuk frontend)
 
-**Please** read the user guide for a better explanation of how CI4 works!
+### Langkah Instalasi
 
-## Repository Management
+1. **Clone repository**
+   ```bash
+   git clone https://github.com/Syaptiyan/sipus-ci4.git
+   cd sipus-ci4
+   ```
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+2. **Install dependencies**
+   ```bash
+   composer install
+   ```
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+3. **Konfigurasi environment**
+   ```bash
+   cp env .env
+   ```
+   Edit file `.env` sesuai konfigurasi database Anda:
+   ```
+   database.default.hostname = localhost
+   database.default.database = sipus
+   database.default.username = root
+   database.default.password = 
+   ```
 
-## Server Requirements
+4. **Jalankan migrasi**
+   ```bash
+   php spark migrate
+   ```
 
-PHP version 8.2 or higher is required, with the following extensions installed:
+5. **Jalankan seeder** (data dummy)
+   ```bash
+   php spark db:seed DatabaseSeeder
+   ```
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+6. **Jalankan server**
+   ```bash
+   php spark serve
+   ```
 
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - The end of life date for PHP 8.1 was December 31, 2025.
-> - If you are still using below PHP 8.2, you should upgrade immediately.
-> - The end of life date for PHP 8.2 will be December 31, 2026.
+7. **Akses aplikasi**
+   Buka `http://localhost:8080`
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+### Menggunakan Docker
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+```bash
+docker-compose up -d
+```
+
+Akses di `http://localhost:8080`
+
+## 👤 Akun Default
+
+| Role | Username | Password |
+|------|----------|----------|
+| Admin | admin | password |
+| Petugas | petugas | password |
+| Anggota | anggota | password |
+
+## 📁 Struktur Project
+
+```
+sipus-ci4/
+├── app/
+│   ├── Commands/        # CLI commands
+│   ├── Config/          # Konfigurasi aplikasi
+│   ├── Controllers/     # 39 controllers
+│   ├── Database/        # Migrations & seeds
+│   ├── Filters/         # Auth & maintenance filters
+│   ├── Helpers/         # Helper functions
+│   ├── Models/          # 19 models
+│   └── Views/           # 40+ view files
+├── public/              # Document root
+├── writable/            # Logs, cache, session
+├── docker-compose.yml   # Docker configuration
+└── spark                # CI4 CLI tool
+```
+
+## 📫 Kontak
+
+- **GitHub:** [@Syaptiyan](https://github.com/Syaptiyan)
+- **Instagram:** [@adee.razer](https://instagram.com/adee.razer)
+- **LinkedIn:** [Syaptiyan Ade Putra](https://linkedin.com/in/syaptiyan-ade-putra-b4945120b)
+
+## 📄 License
+
+MIT License
+
+---
+
+⭐ **Star repo ini jika bermanfaat!**
