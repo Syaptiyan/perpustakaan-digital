@@ -8,16 +8,21 @@ RUN apt-get update && apt-get install -y \
 
 RUN a2enmod rewrite
 
-# Fix MPM issue
-RUN a2dismod mpm_event && a2enmod mpm_prefork
+# Fix MPM - use prefork only
+RUN a2dismod mpm_event 2>/dev/null || true \
+    && a2enmod mpm_prefork
 
 COPY . /var/www/html/
 COPY docker/vhost.conf /etc/apache2/sites-available/000-default.conf
 
 WORKDIR /var/www/html
 
-RUN chown -R www-data:www-data /var/www/html/writable \
-    && chmod -R 755 /var/www/html/writable
+RUN mkdir -p /var/www/html/writable/cache \
+    && mkdir -p /var/www/html/writable/logs \
+    && mkdir -p /var/www/html/writable/session \
+    && mkdir -p /var/www/html/writable/uploads \
+    && chown -R www-data:www-data /var/www/html/writable \
+    && chmod -R 777 /var/www/html/writable
 
 EXPOSE 80
 CMD ["apache2-foreground"]
