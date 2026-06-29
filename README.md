@@ -1,19 +1,49 @@
-# 📚 SIPUS - Sistem Informasi Perpustakaan
+<div align="center">
 
-Sistem manajemen perpustakaan modern berbasis web yang dibangun dengan CodeIgniter 4. Fitur lengkap untuk mengelola buku, anggota, peminjaman, dan masih banyak lagi.
+# 📚 SIPUS — Sistem Informasi Perpustakaan
 
-## 🚀 Fitur Utama
+**Aplikasi manajemen perpustakaan modern berbasis web**
+
+[![PHP](https://img.shields.io/badge/PHP-8.2-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://php.net)
+[![CodeIgniter](https://img.shields.io/badge/CodeIgniter-4-EF4223?style=for-the-badge&logo=codeigniter&logoColor=white)](https://codeigniter.com)
+[![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://mysql.com)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+
+[![Stars](https://img.shields.io/github/stars/Syaptiyan/sipus-ci4?style=social)](https://github.com/Syaptiyan/sipus-ci4/stargazers)
+[![Forks](https://img.shields.io/github/forks/Syaptiyan/sipus-ci4?style=social)](https://github.com/Syaptiyan/sipus-ci4/network/members)
+[![Issues](https://img.shields.io/github/issues/Syaptiyan/sipus-ci4?style=social)](https://github.com/Syaptiyan/sipus-ci4/issues)
+
+</div>
+
+---
+
+## ✨ Fitur Utama
+
+<table>
+<tr>
+<td width="50%">
 
 ### 📖 Manajemen Buku
-- CRUD buku lengkap (judul, ISBN, penulis, penerbit, kategori, rak)
+- CRUD buku lengkap
 - Upload cover buku
-- Barcode & QR Code buku
+- Barcode & QR Code
 - Pencarian fulltext
+- Kategori, penulis, penerbit, rak
+
+</td>
+<td width="50%">
 
 ### 👥 Manajemen Anggota
 - Data anggota lengkap
 - Kartu anggota (cetak)
-- Status keanggotaan & masa aktif
+- Status keanggotaan
+- Masa aktif keanggotaan
+
+</td>
+</tr>
+<tr>
+<td width="50%">
 
 ### 📋 Peminjaman & Pengembalian
 - Proses peminjaman & pengembalian
@@ -21,17 +51,28 @@ Sistem manajemen perpustakaan modern berbasis web yang dibangun dengan CodeIgnit
 - Riwayat peminjaman per anggota
 - Pengajuan peminjaman online
 
+</td>
+<td width="50%">
+
 ### 📊 Dashboard & Laporan
 - Dashboard statistik interaktif
 - Grafik peminjaman per bulan
-- Laporan buku, anggota, peminjaman, denda
+- Laporan buku, anggota, denda
 - Export laporan
+
+</td>
+</tr>
+<tr>
+<td width="50%">
 
 ### 🔐 Autentikasi & Keamanan
 - Login & registrasi
 - Two-Factor Authentication (2FA)
-- Role-based access control (Admin, Petugas, Anggota)
+- Role-based access control
 - API token untuk integrasi
+
+</td>
+<td width="50%">
 
 ### ⚙️ Pengaturan Sistem
 - Pengaturan perpustakaan
@@ -39,123 +80,239 @@ Sistem manajemen perpustakaan modern berbasis web yang dibangun dengan CodeIgnit
 - Maintenance mode
 - Whitelabel (custom branding)
 
+</td>
+</tr>
+</table>
+
 ### 🎯 Fitur Tambahan
-- Kalender peminjaman
-- Notifikasi sistem
-- Wishlist & favorit buku
-- Rekomendasi buku
-- Scan barcode
-- Broadcast pesan
-- Audit log aktivitas
+- 📅 Kalender peminjaman
+- 🔔 Notifikasi sistem
+- ❤️ Wishlist & favorit buku
+- 💡 Rekomendasi buku
+- 📱 Scan barcode
+- 📢 Broadcast pesan
+- 📝 Audit log aktivitas
+- 🌐 REST API
+
+---
 
 ## 🛠️ Teknologi
 
-| Komponen | Teknologi |
-|----------|-----------|
-| **Backend** | PHP 8.2+, CodeIgniter 4.7 |
-| **Database** | MySQL 8.0+ |
-| **Frontend** | Tailwind CSS, Alpine.js |
-| **Chart** | Chart.js |
-| **Calendar** | FullCalendar |
-| **Barcode** | JsBarcode, Html5-QRCode |
-| **Container** | Docker (opsional) |
+| Komponen | Teknologi | Versi |
+|----------|-----------|-------|
+| **Backend** | PHP | 8.2+ |
+| **Framework** | CodeIgniter | 4.7 |
+| **Database** | MySQL | 8.0+ |
+| **Frontend** | Tailwind CSS | 3.x |
+| **JavaScript** | Alpine.js | 3.x |
+| **Chart** | Chart.js | 4.x |
+| **Calendar** | FullCalendar | 6.x |
+| **Barcode** | JsBarcode | 4.x |
+| **QR Code** | Html5-QRCode | 2.x |
+| **Container** | Docker | - |
 
-## 📦 Instalasi
+---
+
+## 🚀 Instalasi
 
 ### Prasyarat
-- PHP 8.2+
+- PHP 8.2+ dengan ekstensi: `intl`, `mbstring`, `mysqlnd`, `json`, `gd`, `curl`
 - MySQL 8.0+
-- Composer
-- Node.js (opsional, untuk frontend)
+- Composer 2.x
+- Node.js 18+ (opsional)
 
-### Langkah Instalasi
+### Quick Start
 
-1. **Clone repository**
-   ```bash
-   git clone https://github.com/Syaptiyan/sipus-ci4.git
-   cd sipus-ci4
-   ```
+```bash
+# 1. Clone repository
+git clone https://github.com/Syaptiyan/sipus-ci4.git
+cd sipus-ci4
 
-2. **Install dependencies**
-   ```bash
-   composer install
-   ```
+# 2. Install dependencies
+composer install
 
-3. **Konfigurasi environment**
-   ```bash
-   cp env .env
-   ```
-   Edit file `.env` sesuai konfigurasi database Anda:
-   ```
-   database.default.hostname = localhost
-   database.default.database = sipus
-   database.default.username = root
-   database.default.password = 
-   ```
+# 3. Setup environment
+cp env .env
+# Edit .env sesuai konfigurasi database Anda
 
-4. **Jalankan migrasi**
-   ```bash
-   php spark migrate
-   ```
+# 4. Jalankan migrasi
+php spark migrate
 
-5. **Jalankan seeder** (data dummy)
-   ```bash
-   php spark db:seed DatabaseSeeder
-   ```
+# 5. Seed data dummy (opsional)
+php spark db:seed DatabaseSeeder
 
-6. **Jalankan server**
-   ```bash
-   php spark serve
-   ```
+# 6. Jalankan server
+php spark serve
 
-7. **Akses aplikasi**
-   Buka `http://localhost:8080`
+# 7. Buka browser
+# http://localhost:8080
+```
 
 ### Menggunakan Docker
 
 ```bash
 docker-compose up -d
+# Akses: http://localhost:8080
 ```
 
-Akses di `http://localhost:8080`
+### Menggunakan XAMPP/WAMP
+
+1. Copy project ke folder `htdocs/` atau `www/`
+2. Buat database `sipus` di phpMyAdmin
+3. Copy `env` ke `.env` dan sesuaikan konfigurasi
+4. Buka `http://localhost/sipus-ci4/public/`
+
+---
 
 ## 👤 Akun Default
 
-| Role | Username | Password |
-|------|----------|----------|
-| Admin | admin | password |
-| Petugas | petugas | password |
-| Anggota | anggota | password |
+| Role | Username | Password | Akses |
+|------|----------|----------|-------|
+| 🔴 Admin | `admin` | `password` | Full akses |
+| 🟡 Petugas | `petugas` | `password` | Operasional |
+| 🟢 Anggota | `anggota` | `password` | Lihat & pinjam |
+
+---
+
+## 📸 Screenshots
+
+<div align="center">
+
+### Login Page
+![Login](https://via.placeholder.com/800x400/1a1a2e/ffffff?text=Login+Page)
+
+### Dashboard
+![Dashboard](https://via.placeholder.com/800x400/1a1a2e/ffffff?text=Dashboard)
+
+### Manajemen Buku
+![Buku](https://via.placeholder.com/800x400/1a1a2e/ffffff?text=Manajemen+Buku)
+
+### Peminjaman
+![Peminjaman](https://via.placeholder.com/800x400/1a1a2e/ffffff?text=Peminjaman)
+
+</div>
+
+---
 
 ## 📁 Struktur Project
 
 ```
 sipus-ci4/
-├── app/
-│   ├── Commands/        # CLI commands
-│   ├── Config/          # Konfigurasi aplikasi
-│   ├── Controllers/     # 39 controllers
-│   ├── Database/        # Migrations & seeds
-│   ├── Filters/         # Auth & maintenance filters
-│   ├── Helpers/         # Helper functions
-│   ├── Models/          # 19 models
-│   └── Views/           # 40+ view files
-├── public/              # Document root
-├── writable/            # Logs, cache, session
-├── docker-compose.yml   # Docker configuration
-└── spark                # CI4 CLI tool
+├── 📁 app/
+│   ├── 📁 Commands/          # CLI commands
+│   ├── 📁 Config/            # Konfigurasi aplikasi
+│   ├── 📁 Controllers/       # 39 controllers
+│   ├── 📁 Database/          # Migrations & seeds
+│   ├── 📁 Filters/           # Auth & maintenance filters
+│   ├── 📁 Helpers/           # Helper functions
+│   ├── 📁 Models/            # 19 models
+│   ├── 📁 Modules/           # Modular architecture
+│   ├── 📁 Views/             # 40+ view files
+│   └── 📁 Services/          # Service layer
+├── 📁 public/                # Document root
+│   ├── 📁 assets/            # CSS, JS, images
+│   └── 📄 index.php          # Entry point
+├── 📁 writable/              # Logs, cache, session
+├── 📁 docker/                # Docker configuration
+├── 📄 composer.json          # PHP dependencies
+├── 📄 docker-compose.yml     # Docker Compose
+└── 📄 spark                  # CI4 CLI tool
 ```
-
-## 📫 Kontak
-
-- **GitHub:** [@Syaptiyan](https://github.com/Syaptiyan)
-- **Instagram:** [@adee.razer](https://instagram.com/adee.razer)
-- **LinkedIn:** [Syaptiyan Ade Putra](https://linkedin.com/in/syaptiyan-ade-putra-b4945120b)
-
-## 📄 License
-
-MIT License
 
 ---
 
-⭐ **Star repo ini jika bermanfaat!**
+## 🔌 API Documentation
+
+SIPUS menyediakan REST API untuk integrasi:
+
+```bash
+# Generate API token
+POST /api/auth/token
+
+# Get semua buku
+GET /api/buku
+Authorization: Bearer {token}
+
+# Get buku by ID
+GET /api/buku/{id}
+
+# Create peminjaman
+POST /api/peminjaman
+Authorization: Bearer {token}
+```
+
+📖 [Dokumentasi API Lengkap](app/Views/page/api-docs.php)
+
+---
+
+## 🤝 Kontribusi
+
+Kontribusi sangat diterima! Berikut cara berkontribusi:
+
+1. **Fork** repository ini
+2. Buat **branch** baru: `git checkout -b fitur-baru`
+3. **Commit** perubahan: `git commit -m 'feat: tambah fitur baru'`
+4. **Push** ke branch: `git push origin fitur-baru`
+5. Buat **Pull Request**
+
+### Panduan Commit
+- `feat:` fitur baru
+- `fix:` perbaikan bug
+- `docs:` dokumentasi
+- `style:` formatting
+- `refactor:` refactoring
+- `test:` testing
+- `chore:` maintenance
+
+---
+
+## 🐛 Bug Reports
+
+Jika menemukan bug, silakan buat [issue](https://github.com/Syaptiyan/sipus-ci4/issues/new) dengan template:
+
+1. **Deskripsi bug**
+2. **Langkah reproduce**
+3. **Expected behavior**
+4. **Actual behavior**
+5. **Screenshot** (jika ada)
+6. **Environment** (PHP version, OS, browser)
+
+---
+
+## 📝 Changelog
+
+### v1.0.0 (2026-06-29)
+- 🎉 Initial release
+- ✅ Manajemen buku, anggota, peminjaman
+- ✅ Dashboard & laporan
+- ✅ Autentikasi & 2FA
+- ✅ REST API
+- ✅ Backup & restore
+- ✅ Barcode & QR Code
+- ✅ Docker support
+
+---
+
+## 📄 License
+
+MIT License — bebas digunakan untuk project personal maupun komersial.
+
+---
+
+## 👨‍💻 Author
+
+**Syaptiyan Ade Putra**
+
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Syaptiyan)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/adee.razer)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/syaptiyan-ade-putra-b4945120b)
+
+---
+
+<div align="center">
+
+**⭐ Star repo ini jika bermanfaat! ⭐**
+
+Made with ❤️ by [Syaptiyan](https://github.com/Syaptiyan)
+
+</div>
