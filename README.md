@@ -174,19 +174,6 @@ docker-compose up -d
 
 ---
 
-## 📸 Screenshots
-
-<div align="center">
-
-### 🌐 Live Demo
-**[https://syaptiyan.github.io/perpustakaan-digital](https://syaptiyan.github.io/perpustakaan-digital)**
-
-Login: `admin` / `password`
-
-</div>
-
----
-
 ## 📁 Struktur Project
 
 ```
@@ -216,7 +203,7 @@ perpustakaan-digital/
 
 ## 🔌 API Documentation
 
-SIPUS menyediakan REST API untuk integrasi:
+Perpustakaan Digital menyediakan REST API untuk integrasi:
 
 ```bash
 # Generate API token
