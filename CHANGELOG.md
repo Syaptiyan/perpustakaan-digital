@@ -5,15 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.1.0] - 2026-07-04
 
-### Added
-- GitHub Actions CI/CD pipeline
-- Docker support
-- REST API documentation
-- Contributing guidelines
-- Issue templates
-- Pull request template
+### Changed
+- Rename repository: `sipus-ci4` → `perpustakaan-digital`
+- Update all documentation references
+- Improve README structure and clarity
+
+### Fixed
+- Fix all internal links to use new repository name
+- Fix clone URL in documentation
+- Fix issue template links
 
 ## [1.0.0] - 2026-06-29
 
@@ -57,11 +59,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 | Version | Date | Description |
 |---------|------|-------------|
+| 1.1.0 | 2026-07-04 | Rename repository |
 | 1.0.0 | 2026-06-29 | Initial release |
 
 ---
 
 ## How to Update
+
+### From 1.0.0 to 1.1.0
+1. Update remote URL: `git remote set-url origin https://github.com/Syaptiyan/perpustakaan-digital.git`
+2. Pull latest code
+3. Clear cache: `php spark cache:clear`
 
 ### From 0.x to 1.0.0
 1. Backup database

@@ -1,8 +1,8 @@
 <div align="center">
 
-# 📚 SIPUS — Sistem Informasi Perpustakaan
+# 📚 Perpustakaan Digital
 
-**Aplikasi manajemen perpustakaan modern berbasis web**
+**Sistem Informasi Perpustakaan modern berbasis web**
 
 [![PHP](https://img.shields.io/badge/PHP-8.2-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://php.net)
 [![CodeIgniter](https://img.shields.io/badge/CodeIgniter-4-EF4223?style=for-the-badge&logo=codeigniter&logoColor=white)](https://codeigniter.com)
@@ -10,9 +10,9 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-[![Stars](https://img.shields.io/github/stars/Syaptiyan/perpustakaan-digital?style=social)](https://github.com/Syaptiyan/perpustakaan-digital/stargazers)
-[![Forks](https://img.shields.io/github/forks/Syaptiyan/perpustakaan-digital?style=social)](https://github.com/Syaptiyan/perpustakaan-digital/network/members)
-[![Issues](https://img.shields.io/github/issues/Syaptiyan/perpustakaan-digital?style=social)](https://github.com/Syaptiyan/perpustakaan-digital/issues)
+[![GitHub Stars](https://img.shields.io/github/stars/Syaptiyan/perpustakaan-digital?style=social)](https://github.com/Syaptiyan/perpustakaan-digital/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/Syaptiyan/perpustakaan-digital?style=social)](https://github.com/Syaptiyan/perpustakaan-digital/network/members)
+[![GitHub Issues](https://img.shields.io/github/issues/Syaptiyan/perpustakaan-digital?style=social)](https://github.com/Syaptiyan/perpustakaan-digital/issues)
 
 </div>
 
@@ -125,8 +125,8 @@
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/Syaptiyan/sipus-ci4.git
-cd sipus-ci4
+git clone https://github.com/Syaptiyan/perpustakaan-digital.git
+cd perpustakaan-digital
 
 # 2. Install dependencies
 composer install
@@ -160,7 +160,7 @@ docker-compose up -d
 1. Copy project ke folder `htdocs/` atau `www/`
 2. Buat database `sipus` di phpMyAdmin
 3. Copy `env` ke `.env` dan sesuaikan konfigurasi
-4. Buka `http://localhost/sipus-ci4/public/`
+4. Buka `http://localhost/perpustakaan-digital/public/`
 
 ---
 
@@ -179,50 +179,28 @@ docker-compose up -d
 <div align="center">
 
 ### 🌐 Live Demo
-**[https://syaptiyan.github.io/sipus](https://syaptiyan.github.io/sipus)**
+**[https://syaptiyan.github.io/perpustakaan-digital](https://syaptiyan.github.io/perpustakaan-digital)**
 
 Login: `admin` / `password`
 
----
-
-### Login Page
-![Login Page](images/login.png)
-
-### Dashboard
-![Dashboard](images/dashboard.png)
-
-### Manajemen Buku
-![Manajemen Buku](images/buku.png)
-
-### Manajemen Anggota
-![Manajemen Anggota](images/anggota.png)
-
-### Peminjaman
-![Peminjaman](images/peminjaman.png)
-
-### Mobile View
-![Mobile View](images/mobile.png)
-
 </div>
-
-> 📝 **Cara Screenshot:** Buka [demo](https://syaptiyan.github.io/sipus), login, lalu screenshot setiap halaman. Simpan di folder `images/` dengan nama sesuai di atas.
 
 ---
 
 ## 📁 Struktur Project
 
 ```
-sipus-ci4/
+perpustakaan-digital/
 ├── 📁 app/
 │   ├── 📁 Commands/          # CLI commands
 │   ├── 📁 Config/            # Konfigurasi aplikasi
-│   ├── 📁 Controllers/       # 39 controllers
+│   ├── 📁 Controllers/       # Controllers
 │   ├── 📁 Database/          # Migrations & seeds
 │   ├── 📁 Filters/           # Auth & maintenance filters
 │   ├── 📁 Helpers/           # Helper functions
-│   ├── 📁 Models/            # 19 models
+│   ├── 📁 Models/            # Models
 │   ├── 📁 Modules/           # Modular architecture
-│   ├── 📁 Views/             # 40+ view files
+│   ├── 📁 Views/             # View files
 │   └── 📁 Services/          # Service layer
 ├── 📁 public/                # Document root
 │   ├── 📁 assets/            # CSS, JS, images
@@ -283,7 +261,7 @@ Kontribusi sangat diterima! Berikut cara berkontribusi:
 
 ## 🐛 Bug Reports
 
-Jika menemukan bug, silakan buat [issue](https://github.com/Syaptiyan/sipus-ci4/issues/new) dengan template:
+Jika menemukan bug, silakan buat [issue](https://github.com/Syaptiyan/perpustakaan-digital/issues/new) dengan template:
 
 1. **Deskripsi bug**
 2. **Langkah reproduce**
@@ -295,6 +273,11 @@ Jika menemukan bug, silakan buat [issue](https://github.com/Syaptiyan/sipus-ci4/
 ---
 
 ## 📝 Changelog
+
+### v1.1.0 (2026-07-04)
+- ✨ Rename repository: sipus-ci4 → perpustakaan-digital
+- 📝 Update README & CHANGELOG
+- 🔧 Perbaiki dokumentasi
 
 ### v1.0.0 (2026-06-29)
 - 🎉 Initial release
