@@ -1,4 +1,4 @@
-app = 'sipus-ci4'
+app = 'perpustakaan-digital'
 primary_region = 'iad'
 
 [build]

@@ -1,11 +1,11 @@
-# Contributing to SIPUS
+# Contributing to Perpustakaan Digital
 
 Terima kasih atas minat Anda untuk berkontribusi! 🎉
 
 ## 🚀 Cara Berkontribusi
 
 ### 1. Report Bug
-Buka [Issues](https://github.com/Syaptiyan/sipus-ci4/issues/new) dan gunakan template:
+Buka [Issues](https://github.com/Syaptiyan/perpustakaan-digital/issues/new) dan gunakan template:
 
 ```markdown
 ## Deskripsi Bug
@@ -33,7 +33,7 @@ Buka [Issues](https://github.com/Syaptiyan/sipus-ci4/issues/new) dan gunakan tem
 ```
 
 ### 2. Request Fitur
-Buka [Issues](https://github.com/Syaptiyan/sipus-ci4/issues/new) dengan label `enhancement`:
+Buka [Issues](https://github.com/Syaptiyan/perpustakaan-digital/issues/new) dengan label `enhancement`:
 
 ```markdown
 ## Deskripsi Fitur
@@ -54,8 +54,8 @@ Buka [Issues](https://github.com/Syaptiyan/sipus-ci4/issues/new) dengan label `e
 #### Setup Development
 ```bash
 # Fork repository
-git clone https://github.com/YOUR_USERNAME/sipus-ci4.git
-cd sipus-ci4
+git clone https://github.com/YOUR_USERNAME/perpustakaan-digital.git
+cd perpustakaan-digital
 
 # Install dependencies
 composer install
@@ -147,10 +147,10 @@ Sebelum submit PR, pastikan:
 Berikut area yang membutuhkan kontribusi:
 
 ### 🐛 Bug Fixes
-- Cek [issues](https://github.com/Syaptiyan/sipus-ci4/issues) dengan label `bug`
+- Cek [issues](https://github.com/Syaptiyan/perpustakaan-digital/issues) dengan label `bug`
 
 ### ✨ Fitur Baru
-- Cek [issues](https://github.com/Syaptiyan/sipus-ci4/issues) dengan label `enhancement`
+- Cek [issues](https://github.com/Syaptiyan/perpustakaan-digital/issues) dengan label `enhancement`
 
 ### 📚 Dokumentasi
 - Improve README
@@ -172,14 +172,14 @@ Berikut area yang membutuhkan kontribusi:
 
 Terima kasih kepada semua kontributor! 🙏
 
-[![Contributors](https://contrib.rocks/image?repo=Syaptiyan/sipus-ci4)](https://github.com/Syaptiyan/sipus-ci4/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=Syaptiyan/perpustakaan-digital)](https://github.com/Syaptiyan/perpustakaan-digital/graphs/contributors)
 
 ---
 
 ## 📞 Kontak
 
 Jika ada pertanyaan, hubungi:
-- **GitHub Issues**: [Issues](https://github.com/Syaptiyan/sipus-ci4/issues)
+- **GitHub Issues**: [Issues](https://github.com/Syaptiyan/perpustakaan-digital/issues)
 - **Email**: syaptiyan@gmail.com
 
 ---

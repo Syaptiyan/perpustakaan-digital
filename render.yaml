@@ -1,8 +1,8 @@
 services:
   - type: web
-    name: sipus-ci4
+    name: perpustakaan-digital
     runtime: docker
-    repo: https://github.com/Syaptiyan/sipus-ci4
+    repo: https://github.com/Syaptiyan/perpustakaan-digital
     branch: main
     region: singapore
     plan: free
@@ -11,7 +11,7 @@ services:
       - key: CI_ENVIRONMENT
         value: production
       - key: app.baseURL
-        value: https://sipus-ci4.onrender.com
+        value: https://perpustakaan-digital.onrender.com
       - key: database.default.hostname
         fromDatabase:
           name: sipus-db
