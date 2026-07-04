@@ -10,9 +10,9 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-[![Stars](https://img.shields.io/github/stars/Syaptiyan/sipus-ci4?style=social)](https://github.com/Syaptiyan/sipus-ci4/stargazers)
-[![Forks](https://img.shields.io/github/forks/Syaptiyan/sipus-ci4?style=social)](https://github.com/Syaptiyan/sipus-ci4/network/members)
-[![Issues](https://img.shields.io/github/issues/Syaptiyan/sipus-ci4?style=social)](https://github.com/Syaptiyan/sipus-ci4/issues)
+[![Stars](https://img.shields.io/github/stars/Syaptiyan/perpustakaan-digital?style=social)](https://github.com/Syaptiyan/perpustakaan-digital/stargazers)
+[![Forks](https://img.shields.io/github/forks/Syaptiyan/perpustakaan-digital?style=social)](https://github.com/Syaptiyan/perpustakaan-digital/network/members)
+[![Issues](https://img.shields.io/github/issues/Syaptiyan/perpustakaan-digital?style=social)](https://github.com/Syaptiyan/perpustakaan-digital/issues)
 
 </div>
 
